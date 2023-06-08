@@ -1,0 +1,35 @@
+.point-scroll {
+    position: fixed;
+    height: 68px;
+    width: 68px;
+    bottom: 3%;
+    left: 48%;
+    animation: 0.5s ease 0s 3 normal none running put-down;
+}
+.point-scroll__img {
+    width: 100%;
+}
+
+@keyframes put-down {
+    0% {
+        transform: translateY(0px);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .point-scroll {
+        left: 5%;
+    }
+}

@@ -1,0 +1,70 @@
+.header-box {
+    padding: 80px 173px 0px 50px;
+    transform: translateX(-50%);
+    height: 48px;
+    width: 100%;
+    max-width: 1025px;
+    margin: 0 auto;
+    left: 50%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+    transition: opacity ease 0.3s 0.3s;
+}
+.fade-in {
+    animation: 2s ease 0s 1 normal forwards running fade-in;
+}
+
+.logo {
+    height: auto;
+    width: 28%;
+    max-width: 142px;
+}
+
+.sns-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.app-download {
+    margin-right: 110px;
+}
+.app-download__button {
+    width: 140px;
+    height: 48px;
+    margin-right: 26px;
+    background-image: url("https://www.baemin.com/_next/static/images/btn-download-white@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.sns-box > div {
+    width: 50px;
+}
+.sns-box > div > img {
+    cursor: pointer;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sns-box {
+        display: none;
+    }
+    .logo {
+        width: 100%;
+    }
+}

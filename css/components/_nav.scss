@@ -1,0 +1,29 @@
+.dot-box {
+    position: fixed;
+
+    bottom: 40%;
+    right: 3%;
+    transition: opacity ease 0.5s 0.5s;
+}
+.dot-button {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(https://www.baemin.com/_next/static/images/dotScroll02@2x.png);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+.dot-ul {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+}
+.dot-button.current {
+    background: url(https://www.baemin.com/_next/static/images/dotSelect@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

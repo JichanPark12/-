@@ -1,0 +1,20 @@
+.rider {
+    position: absolute;
+    width: 173px;
+    height: 226px;
+    cursor: inherit;
+    top: 0;
+    right: 0;
+    transition: opacity ease 0.5s 0.5s;
+}
+.rider__img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1025px) {
+    .rider {
+        width: 109px;
+        height: 142px;
+    }
+}

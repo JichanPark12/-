@@ -1,0 +1,487 @@
+// 메인페이지
+@keyframes zoom-in {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+main {
+    transition: transform 1s ease;
+    width: 100%;
+}
+.rayer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.main {
+    height: 100vh;
+    width: 100%;
+    background-color: #2ac1bc;
+}
+.main.active {
+    transform: translateY(0);
+}
+.main.transition {
+    transition: transform 0.5s ease;
+}
+.main-page {
+    width: 100%;
+    z-index: -9999;
+    position: relative;
+}
+.main-page__img {
+    background-image: url("https://www.baemin.com/_next/static/images/main_03@2x.jpg");
+    animation: 1s linear 0s 1 normal forwards running zoom-in;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    z-index: -9999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.main-page__content-box {
+    padding-top: $place-header-height;
+
+    height: 100%;
+    position: relative;
+}
+
+.main-page__content__img-box {
+    width: 50%;
+}
+.main-page__content__img-box > img {
+    height: auto;
+    width: 100%;
+}
+
+.main-page__content__appstore-box {
+    margin-top: 30px;
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.appstore-box :nth-child(1) {
+    margin-bottom: 16px;
+}
+
+.apple-button {
+    background-image: url("https://www.baemin.com/_next/static/images/img-appstore-default@2x.png");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 70px;
+    border-radius: 100px;
+}
+.google-button {
+    background-image: url("https://www.baemin.com/_next/static/images/img-googleplay-default@2x.png");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 70px;
+    border-radius: 100px;
+    margin-left: 5px;
+}
+.qr-box > div {
+    margin-bottom: 16px;
+}
+.qr-img {
+    width: 200px;
+}
+.main-page__content__app-download {
+    width: 410px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+// first-page
+
+.page__content-box {
+    padding-top: $place-header-height;
+    position: relative;
+    height: 100%;
+    @keyframes left {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(25%);
+            opacity: 1;
+        }
+    }
+    @keyframes up {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    @keyframes bike {
+        0% {
+            transform: translateX(0px) translateY(0px);
+        }
+        100% {
+            transform: translateX(12%) translateY(13%);
+        }
+    }
+    .page__img-box {
+        margin-bottom: 15px;
+        img {
+            width: 50%;
+            height: auto;
+        }
+    }
+
+    .first-page__info {
+        color: white;
+        p:nth-of-type(1) {
+            margin-bottom: 7px;
+        }
+        div {
+            margin-top: 15px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    }
+    .first-page-img-box {
+        position: relative;
+        bottom: -30%;
+        right: -6%;
+        .first-page-img {
+            width: 62%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .first-page__background {
+            position: absolute;
+            width: 62%;
+            z-index: 1;
+            bottom: -100px;
+            right: -100px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .first-page-img.active {
+        animation: 0.8s ease 1s 1 normal forwards running bike;
+    }
+    .second-page__info {
+        color: white;
+        p {
+            margin-bottom: 8px;
+        }
+        p:nth-of-type(2) {
+            margin-bottom: 15px;
+        }
+        div {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 7px;
+        }
+    }
+    .second-page-img {
+        opacity: 0;
+        position: absolute;
+        height: auto;
+        width: 62%;
+        right: 0;
+        bottom: 0;
+        transform: translate(0px, 100%);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .second-page-img.active {
+        animation: 0.8s ease 1s 1 normal forwards running up;
+    }
+    .third-page__info {
+        color: white;
+        p {
+            margin-bottom: 8px;
+        }
+        p:last-of-type {
+            margin-bottom: 25px;
+        }
+        a {
+            display: flex;
+            position: relative;
+            width: 232px;
+            img {
+                position: absolute;
+                left: -2%;
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+    .third-page-img {
+        width: 62%;
+        right: 0;
+        height: auto;
+        bottom: 0;
+        opacity: 0;
+
+        transform: translate(0px, 100%);
+        position: absolute;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .third-page-img.active {
+        animation: 0.8s ease 1s 1 normal forwards running up;
+    }
+    .fourth-page__info {
+        color: white;
+        p {
+            margin-bottom: 8px;
+        }
+    }
+    .fourth-page-img {
+        width: 62%;
+        right: 0;
+        height: auto;
+        bottom: 0;
+
+        opacity: 0;
+
+        transform: translate(0px, 100%);
+        position: absolute;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .fourth-page-img.active {
+        animation: 0.8s ease 1s 1 normal forwards running up;
+    }
+    .fifth-page__info {
+        color: white;
+        p {
+            margin-bottom: 8px;
+        }
+        p:last-of-type {
+            margin-bottom: 15px;
+        }
+
+        div {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 7px;
+        }
+    }
+    .fifth-page-img {
+        position: absolute;
+        width: 62%;
+        height: auto;
+        opacity: 0;
+        bottom: 144px;
+        right: 18%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .fifth-page-img.active {
+        animation: 0.8s ease 1s 1 normal forwards running left;
+    }
+    .sixth-page__info {
+        color: white;
+        p {
+            margin-bottom: 8px;
+        }
+    }
+    .sixth-page-img {
+        width: 62%;
+        right: 0;
+        height: auto;
+        transform: translate(0px, 100%);
+        bottom: 0;
+        opacity: 0;
+        position: absolute;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .sixth-page-img.active {
+        animation: 0.8s ease 1s 1 normal forwards running up;
+    }
+}
+@media screen and (max-width: 1025px) {
+    .appstore-box {
+        display: none;
+    }
+    .qr-box {
+        display: none;
+    }
+
+    .font {
+        p {
+            font-size: 14px;
+        }
+    }
+    .main-page__content__app-download {
+        display: block;
+        position: absolute;
+    }
+}
+
+footer {
+    position: relative;
+    height: 100vh;
+    a {
+        color: rgb(51, 51, 51);
+    }
+
+    .footer__ul-box {
+        position: relative;
+        .enter-link-list {
+            display: grid;
+            width: 300px;
+            height: 80px;
+            margin-bottom: 55px;
+            grid-template-columns: 1fr 1fr;
+
+            li {
+                height: 22px;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: auto;
+
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .sns-link-list {
+            display: flex;
+            width: 270px;
+            justify-content: space-between;
+            position: absolute;
+            left: -8px;
+            li {
+                width: 40px;
+                height: 35px;
+                a {
+                    height: 100%;
+                    width: 100%;
+                }
+                img {
+                    height: 95%;
+                    width: auto;
+                }
+            }
+        }
+    }
+    .footer__enter-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+        font-size: 14px;
+        position: absolute;
+        left: 5%;
+        bottom: 9%;
+        color: rgb(51, 51, 51);
+        p {
+            line-height: 20px;
+            span {
+                margin-bottom: 5px;
+                line-height: 5px;
+            }
+        }
+    }
+    .footer__title {
+        position: absolute;
+        top: 120px;
+        right: 28%;
+        width: 190px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .footer__app-download {
+        position: absolute;
+        right: 32%;
+        top: 370px;
+        width: 145px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-page__content__img-box {
+        width: 100%;
+    }
+
+    .main-page__content__app-download {
+        position: fixed;
+        z-index: 9999;
+        width: 286px;
+        right: calc(50vw - 140px);
+    }
+    .page__content-box .page__img-box img {
+        width: 100%;
+    }
+    .page__content-box .first-page-img-box .first-page-img {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .page__content-box .first-page-img-box .first-page__background {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .img-ani {
+        width: 100% !important;
+        img {
+            width: 100% !important;
+        }
+    }
+}

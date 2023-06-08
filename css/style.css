@@ -1,0 +1,828 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+.width {
+  width: 60%;
+  margin: 0 auto;
+}
+
+body {
+  width: 100%;
+  position: fixed;
+}
+
+.sort {
+  width: 1024px;
+  padding: 165px 50px 0px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .sort {
+    width: 100%;
+  }
+  .page__content-box .page__img-box img {
+    width: 100%;
+  }
+}
+.footer__sort {
+  width: 1024px;
+  padding: 120px 50px;
+  margin: 0 auto;
+}
+
+.opacity {
+  opacity: 0 !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.opacity > ul > li > button {
+  cursor: inherit;
+}
+
+.header-box {
+  padding: 80px 173px 0px 50px;
+  transform: translateX(-50%);
+  height: 48px;
+  width: 100%;
+  max-width: 1025px;
+  margin: 0 auto;
+  left: 50%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  transition: opacity ease 0.3s 0.3s;
+}
+
+.fade-in {
+  animation: 2s ease 0s 1 normal forwards running fade-in;
+}
+
+.logo {
+  height: auto;
+  width: 28%;
+  max-width: 142px;
+}
+
+.sns-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-download {
+  margin-right: 110px;
+}
+
+.app-download__button {
+  width: 140px;
+  height: 48px;
+  margin-right: 26px;
+  background-image: url("https://www.baemin.com/_next/static/images/btn-download-white@3x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sns-box > div {
+  width: 50px;
+}
+
+.sns-box > div > img {
+  cursor: pointer;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sns-box {
+    display: none;
+  }
+  .logo {
+    width: 100%;
+  }
+}
+@keyframes zoom-in {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+main {
+  transition: transform 1s ease;
+  width: 100%;
+}
+
+.rayer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background-color: #2ac1bc;
+}
+
+.main.active {
+  transform: translateY(0);
+}
+
+.main.transition {
+  transition: transform 0.5s ease;
+}
+
+.main-page {
+  width: 100%;
+  z-index: -9999;
+  position: relative;
+}
+
+.main-page__img {
+  background-image: url("https://www.baemin.com/_next/static/images/main_03@2x.jpg");
+  animation: 1s linear 0s 1 normal forwards running zoom-in;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  z-index: -9999;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.main-page__content-box {
+  padding-top: 160px;
+  height: 100%;
+  position: relative;
+}
+
+.main-page__content__img-box {
+  width: 50%;
+}
+
+.main-page__content__img-box > img {
+  height: auto;
+  width: 100%;
+}
+
+.main-page__content__appstore-box {
+  margin-top: 30px;
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.appstore-box :nth-child(1) {
+  margin-bottom: 16px;
+}
+
+.apple-button {
+  background-image: url("https://www.baemin.com/_next/static/images/img-appstore-default@2x.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  height: 70px;
+  border-radius: 100px;
+}
+
+.google-button {
+  background-image: url("https://www.baemin.com/_next/static/images/img-googleplay-default@2x.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  height: 70px;
+  border-radius: 100px;
+  margin-left: 5px;
+}
+
+.qr-box > div {
+  margin-bottom: 16px;
+}
+
+.qr-img {
+  width: 200px;
+}
+
+.main-page__content__app-download {
+  width: 410px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+.main-page__content__app-download img {
+  width: 100%;
+  height: auto;
+}
+
+.page__content-box {
+  padding-top: 160px;
+  position: relative;
+  height: 100%;
+}
+@keyframes left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(25%);
+    opacity: 1;
+  }
+}
+@keyframes up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes bike {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(12%) translateY(13%);
+  }
+}
+.page__content-box .page__img-box {
+  margin-bottom: 15px;
+}
+.page__content-box .page__img-box img {
+  width: 50%;
+  height: auto;
+}
+.page__content-box .first-page__info {
+  color: white;
+}
+.page__content-box .first-page__info p:nth-of-type(1) {
+  margin-bottom: 7px;
+}
+.page__content-box .first-page__info div {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.page__content-box .first-page-img-box {
+  position: relative;
+  bottom: -30%;
+  right: -6%;
+}
+.page__content-box .first-page-img-box .first-page-img {
+  width: 62%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+.page__content-box .first-page-img-box .first-page-img img {
+  width: 100%;
+  height: auto;
+}
+.page__content-box .first-page-img-box .first-page__background {
+  position: absolute;
+  width: 62%;
+  z-index: 1;
+  bottom: -100px;
+  right: -100px;
+}
+.page__content-box .first-page-img-box .first-page__background img {
+  width: 100%;
+  height: auto;
+}
+.page__content-box .first-page-img.active {
+  animation: 0.8s ease 1s 1 normal forwards running bike;
+}
+.page__content-box .second-page__info {
+  color: white;
+}
+.page__content-box .second-page__info p {
+  margin-bottom: 8px;
+}
+.page__content-box .second-page__info p:nth-of-type(2) {
+  margin-bottom: 15px;
+}
+.page__content-box .second-page__info div {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 7px;
+}
+.page__content-box .second-page-img {
+  opacity: 0;
+  position: absolute;
+  height: auto;
+  width: 62%;
+  right: 0;
+  bottom: 0;
+  transform: translate(0px, 100%);
+}
+.page__content-box .second-page-img img {
+  width: 100%;
+  height: 100%;
+}
+.page__content-box .second-page-img.active {
+  animation: 0.8s ease 1s 1 normal forwards running up;
+}
+.page__content-box .third-page__info {
+  color: white;
+}
+.page__content-box .third-page__info p {
+  margin-bottom: 8px;
+}
+.page__content-box .third-page__info p:last-of-type {
+  margin-bottom: 25px;
+}
+.page__content-box .third-page__info a {
+  display: flex;
+  position: relative;
+  width: 232px;
+}
+.page__content-box .third-page__info a img {
+  position: absolute;
+  left: -2%;
+  height: auto;
+  width: 100%;
+}
+.page__content-box .third-page-img {
+  width: 62%;
+  right: 0;
+  height: auto;
+  bottom: 0;
+  opacity: 0;
+  transform: translate(0px, 100%);
+  position: absolute;
+}
+.page__content-box .third-page-img img {
+  width: 100%;
+  height: 100%;
+}
+.page__content-box .third-page-img.active {
+  animation: 0.8s ease 1s 1 normal forwards running up;
+}
+.page__content-box .fourth-page__info {
+  color: white;
+}
+.page__content-box .fourth-page__info p {
+  margin-bottom: 8px;
+}
+.page__content-box .fourth-page-img {
+  width: 62%;
+  right: 0;
+  height: auto;
+  bottom: 0;
+  opacity: 0;
+  transform: translate(0px, 100%);
+  position: absolute;
+}
+.page__content-box .fourth-page-img img {
+  width: 100%;
+  height: 100%;
+}
+.page__content-box .fourth-page-img.active {
+  animation: 0.8s ease 1s 1 normal forwards running up;
+}
+.page__content-box .fifth-page__info {
+  color: white;
+}
+.page__content-box .fifth-page__info p {
+  margin-bottom: 8px;
+}
+.page__content-box .fifth-page__info p:last-of-type {
+  margin-bottom: 15px;
+}
+.page__content-box .fifth-page__info div {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 7px;
+}
+.page__content-box .fifth-page-img {
+  position: absolute;
+  width: 62%;
+  height: auto;
+  opacity: 0;
+  bottom: 144px;
+  right: 18%;
+}
+.page__content-box .fifth-page-img img {
+  width: 100%;
+  height: auto;
+}
+.page__content-box .fifth-page-img.active {
+  animation: 0.8s ease 1s 1 normal forwards running left;
+}
+.page__content-box .sixth-page__info {
+  color: white;
+}
+.page__content-box .sixth-page__info p {
+  margin-bottom: 8px;
+}
+.page__content-box .sixth-page-img {
+  width: 62%;
+  right: 0;
+  height: auto;
+  transform: translate(0px, 100%);
+  bottom: 0;
+  opacity: 0;
+  position: absolute;
+}
+.page__content-box .sixth-page-img img {
+  width: 100%;
+  height: 100%;
+}
+.page__content-box .sixth-page-img.active {
+  animation: 0.8s ease 1s 1 normal forwards running up;
+}
+
+@media screen and (max-width: 1025px) {
+  .appstore-box {
+    display: none;
+  }
+  .qr-box {
+    display: none;
+  }
+  .font p {
+    font-size: 14px;
+  }
+  .main-page__content__app-download {
+    display: block;
+    position: absolute;
+  }
+}
+footer {
+  position: relative;
+  height: 100vh;
+}
+footer a {
+  color: rgb(51, 51, 51);
+}
+footer .footer__ul-box {
+  position: relative;
+}
+footer .footer__ul-box .enter-link-list {
+  display: grid;
+  width: 300px;
+  height: 80px;
+  margin-bottom: 55px;
+  grid-template-columns: 1fr 1fr;
+}
+footer .footer__ul-box .enter-link-list li {
+  height: 22px;
+}
+footer .footer__ul-box .enter-link-list li a {
+  width: 100%;
+  height: 100%;
+}
+footer .footer__ul-box .enter-link-list li a img {
+  width: auto;
+  height: 100%;
+}
+footer .footer__ul-box .sns-link-list {
+  display: flex;
+  width: 270px;
+  justify-content: space-between;
+  position: absolute;
+  left: -8px;
+}
+footer .footer__ul-box .sns-link-list li {
+  width: 40px;
+  height: 35px;
+}
+footer .footer__ul-box .sns-link-list li a {
+  height: 100%;
+  width: 100%;
+}
+footer .footer__ul-box .sns-link-list li img {
+  height: 95%;
+  width: auto;
+}
+footer .footer__enter-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  font-size: 14px;
+  position: absolute;
+  left: 5%;
+  bottom: 9%;
+  color: rgb(51, 51, 51);
+}
+footer .footer__enter-info p {
+  line-height: 20px;
+}
+footer .footer__enter-info p span {
+  margin-bottom: 5px;
+  line-height: 5px;
+}
+footer .footer__title {
+  position: absolute;
+  top: 120px;
+  right: 28%;
+  width: 190px;
+}
+footer .footer__title img {
+  width: 100%;
+  height: auto;
+}
+footer .footer__app-download {
+  position: absolute;
+  right: 32%;
+  top: 370px;
+  width: 145px;
+}
+footer .footer__app-download img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .main-page__content__img-box {
+    width: 100%;
+  }
+  .main-page__content__app-download {
+    position: fixed;
+    z-index: 9999;
+    width: 286px;
+    right: calc(50vw - 140px);
+  }
+  .page__content-box .page__img-box img {
+    width: 100%;
+  }
+  .page__content-box .first-page-img-box .first-page-img {
+    width: 100%;
+  }
+  .page__content-box .first-page-img-box .first-page-img img {
+    width: 100%;
+  }
+  .page__content-box .first-page-img-box .first-page__background {
+    width: 100%;
+  }
+  .page__content-box .first-page-img-box .first-page__background img {
+    width: 100%;
+  }
+  .img-ani {
+    width: 100% !important;
+  }
+  .img-ani img {
+    width: 100% !important;
+  }
+}
+.rider {
+  position: absolute;
+  width: 173px;
+  height: 226px;
+  cursor: inherit;
+  top: 0;
+  right: 0;
+  transition: opacity ease 0.5s 0.5s;
+}
+
+.rider__img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 1025px) {
+  .rider {
+    width: 109px;
+    height: 142px;
+  }
+}
+.point-scroll {
+  position: fixed;
+  height: 68px;
+  width: 68px;
+  bottom: 3%;
+  left: 48%;
+  animation: 0.5s ease 0s 3 normal none running put-down;
+}
+
+.point-scroll__img {
+  width: 100%;
+}
+
+@keyframes put-down {
+  0% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .point-scroll {
+    left: 5%;
+  }
+}
+.dot-box {
+  position: fixed;
+  bottom: 40%;
+  right: 3%;
+  transition: opacity ease 0.5s 0.5s;
+}
+
+.dot-button {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(https://www.baemin.com/_next/static/images/dotScroll02@2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+.dot-ul {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-between;
+}
+
+.dot-button.current {
+  background: url(https://www.baemin.com/_next/static/images/dotSelect@2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}/*# sourceMappingURL=style.css.map */
