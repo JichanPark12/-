@@ -10,6 +10,8 @@ const $appDownloadBox = document.querySelector(
     ".main-page__content__app-download"
 );
 let count = 0;
+let start = 0;
+let end = 0;
 
 setTimeout(() => {
     $header.classList.remove("fade-in");
@@ -162,3 +164,21 @@ $rider.addEventListener("click", (e) => {
         e.preventDefault();
     }
 });
+
+window.addEventListener("touchstart", touchStart);
+window.addEventListener("touchend", touchEnd);
+
+function touchStart(event) {
+    start = event.touches[0].pageX;
+}
+
+function touchEnd(event) {
+    end = event.changedTouches[0].pageX;
+    if (!$slider.classList.contains("transition")) {
+        if (start > end) {
+            slideToNext(parseInt(count) + 1);
+        } else {
+            slideToPrev(parseInt(count) - 1);
+        }
+    }
+}
